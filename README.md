@@ -1,4 +1,4 @@
-# GraphRAG --- Multi-Hop Knowledge Reasoning Engine
+# GraphRAG -- Multi-Hop Knowledge Reasoning Engine
 
 > A hybrid Retrieval-Augmented Generation system combining vector
 > search, knowledge graphs, and multi-hop reasoning.
