@@ -23,3 +23,5 @@ pytest-asyncio
 structlog
 
 alembic
+pymupdf
+sentence-transformers
