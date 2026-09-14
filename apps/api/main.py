@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
 from core.config import settings
+from core.health import check_all_services
 
 
 app = FastAPI(
@@ -12,8 +13,4 @@ app = FastAPI(
 
 @app.get("/health")
 async def health():
-    return {
-        "status": "ok",
-        "service": settings.app_name,
-        "environment": settings.environment,
-    }
+    return check_all_services()

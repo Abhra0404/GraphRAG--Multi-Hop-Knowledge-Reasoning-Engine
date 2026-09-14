@@ -21,3 +21,5 @@ pytest
 pytest-asyncio
 
 structlog
+
+alembic

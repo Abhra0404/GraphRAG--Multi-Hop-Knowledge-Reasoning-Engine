@@ -13,5 +13,10 @@ def test_health():
 
     data = response.json()
 
-    assert data["status"] == "ok"
-    assert data["service"] == "GraphRAG"
+    assert "status" in data
+    assert "services" in data
+
+    assert "postgres" in data["services"]
+    assert "neo4j" in data["services"]
+    assert "qdrant" in data["services"]
+    assert "redis" in data["services"]
