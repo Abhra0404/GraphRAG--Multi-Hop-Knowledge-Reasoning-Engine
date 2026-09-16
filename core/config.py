@@ -18,6 +18,8 @@ class Settings(BaseSettings):
 
     redis_url: str = "redis://localhost:6379/0"
 
+    groq_api_key: str = ""
+    llm_model: str = "openai/gpt-oss-20b"
     model_name: str = "gpt-5.6"
     embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
 

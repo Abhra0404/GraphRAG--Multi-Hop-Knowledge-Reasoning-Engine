@@ -27,4 +27,4 @@ def embed_texts(texts: list[str]) -> list[list[float]]:
 
 def embedding_dimension() -> int:
     model = get_embedder()
-    return model.get_sentence_embedding_dimension()
+    return model.get_embedding_dimension()
