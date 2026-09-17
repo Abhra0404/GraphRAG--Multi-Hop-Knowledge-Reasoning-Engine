@@ -1,27 +1,22 @@
 fastapi
 uvicorn[standard]
+
 pydantic
 pydantic-settings
 
 sqlalchemy
 psycopg[binary]
+alembic
 
 neo4j
 qdrant-client
-
 redis
-celery
-
-python-dotenv
 
 httpx
-tenacity
+python-dotenv
+
+pymupdf
+sentence-transformers
 
 pytest
 pytest-asyncio
-
-structlog
-
-alembic
-pymupdf
-sentence-transformers
