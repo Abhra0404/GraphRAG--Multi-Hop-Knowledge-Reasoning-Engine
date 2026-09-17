@@ -11,22 +11,31 @@ Analyze the user's question and return ONLY valid JSON:
 
 {{
   "entities": ["entity 1", "entity 2"],
-  "intent": "short description of what the user wants",
-  "relationship_types": ["RELATION_TYPE"]
+  "intent": "short description",
+  "relationship_types": ["RELATION_TYPE"],
+  "sub_queries": [
+    "simple sub-question 1",
+    "simple sub-question 2"
+  ]
 }}
 
 Rules:
 - Extract only entities relevant to answering the question.
-- Identify relationship types that are likely relevant to answering the question.
+- Identify relationship types likely relevant to answering the question.
+- Break complex questions into simple sub-questions.
+- Keep simple questions to one sub-query.
 - Use concise uppercase relationship names.
-- Do not determine the number of graph hops.
+- Do not determine graph hops.
 
 Question:
 {query}
 """.strip()
 
 
-def _estimate_hops(query: str) -> int:
+def _estimate_hops(
+    query: str,
+    sub_queries: list[str] | None = None,
+) -> int:
     query_lower = query.lower()
 
     multi_hop_patterns = [
@@ -44,6 +53,9 @@ def _estimate_hops(query: str) -> int:
         if re.search(pattern, query_lower):
             return 2
 
+    if sub_queries and len(sub_queries) > 1:
+        return 2
+
     return 1
 
 
@@ -59,6 +71,11 @@ def plan_query(query: str) -> dict:
             f"LLM returned invalid query plan: {response}"
         ) from exc
 
+    sub_queries = plan.get("sub_queries", [])
+
+    if not sub_queries:
+        sub_queries = [query]
+
     return {
         "entities": plan.get("entities", []),
         "intent": plan.get("intent", ""),
@@ -66,9 +83,15 @@ def plan_query(query: str) -> dict:
             "relationship_types",
             [],
         ),
+        "sub_queries": sub_queries,
         "max_hops": max(
             1,
-            min(3, _estimate_hops(query)),
+            min(
+                3,
+                _estimate_hops(
+                    query,
+                    sub_queries,
+                ),
+            ),
         ),
     }
-

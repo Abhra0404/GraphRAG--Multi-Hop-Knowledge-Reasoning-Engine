@@ -23,11 +23,20 @@ class ReasoningChain(BaseModel):
     score: float = 0.0
     confidence: float = 0.0
 
+class EvidenceConflict(BaseModel):
+    type: str
+    source: str
+    relationship: str
+    graph_target: str
+    text: str
 
 class EvidenceBundle(BaseModel):
     text: list[TextEvidence] = Field(
         default_factory=list
     )
     chains: list[ReasoningChain] = Field(
+        default_factory=list
+    )
+    conflicts: list[EvidenceConflict] = Field(
         default_factory=list
     )
