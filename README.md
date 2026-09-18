@@ -7,21 +7,26 @@
 GraphRAG combines multiple sources of evidence:
 
 ```mermaid
-flowchart LR
-    A[User Query] --> B[Query Planner]
-    B --> C[Hybrid Retrieval]
+flowchart TD
+    A[User Query]
+    B[Query Planner]
+    C[Hybrid Retrieval]
+    D[Qdrant]
+    E[Neo4j]
+    F[Multi-Hop Reasoning]
+    G[Evidence Fusion]
+    H[LLM]
+    I[Answer + Citations]
 
-    C --> D[Qdrant]
-    C --> E[Neo4j]
-
-    E --> F[Multi-Hop Reasoning]
-    D --> G[Text Evidence]
-
-    F --> H[Evidence Fusion]
+    A --> B
+    B --> C
+    C --> D
+    C --> E
+    E --> F
+    D --> G
+    F --> G
     G --> H
-
-    H --> I[LLM]
-    I --> J[Answer + Citations]
+    H --> I
 ```
 
 Unlike vanilla vector RAG, GraphRAG can explicitly traverse relationships between entities to support multi-hop reasoning.
