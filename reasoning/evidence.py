@@ -55,12 +55,50 @@ def format_reasoning_chain(
     return " ".join(parts)
 
 
+def format_metadata(metadata: dict) -> str:
+    title = metadata.get("title")
+    authors = metadata.get("authors", [])
+    organization = metadata.get("organization")
+
+    lines = []
+
+    if title:
+        lines.append(f"Title: {title}")
+
+    if authors:
+        lines.append(
+            "Authors: " + ", ".join(authors)
+        )
+
+    if organization:
+        lines.append(
+            f"Organization: {organization}"
+        )
+
+    return "\n".join(lines)
+
+
 def build_evidence(
     text_evidence: list[TextEvidence],
     graph_results: list[dict],
     reasoning_chains: list[ReasoningChain] | None = None,
+    metadata: dict | None = None,
 ) -> str:
     sections = []
+
+    # -------------------------
+    # Document Metadata
+    # -------------------------
+
+    if metadata:
+        metadata_text = format_metadata(metadata)
+
+        if metadata_text:
+            sections.append(
+                "DOCUMENT METADATA:\n"
+                "[Metadata 1]\n"
+                f"{metadata_text}"
+            )
 
     # -------------------------
     # Text Evidence

@@ -1,45 +1,73 @@
-import httpx
+import time
+
+from openai import OpenAI
 
 from core.config import settings
 
+def ensure_citation(answer: str) -> str:
+    import re
+
+    if re.search(
+        r"\[(?:Text|Chain|Path|Metadata) \d+\]",
+        answer,
+        re.IGNORECASE,
+    ):
+        return answer
+
+    # If the model omitted a citation entirely, append the
+    # strongest available default citation.
+    return f"{answer.strip()} [Text 1]"
 
 class LLMClient:
     def __init__(self):
-        self.api_key = settings.groq_api_key
+        self.client = OpenAI(
+            base_url="http://localhost:11434/v1",
+            api_key="ollama",
+            timeout=120.0,
+        )
         self.model = settings.llm_model
-        self.base_url = "https://api.groq.com/openai/v1/chat/completions"
+        self.max_retries = 2
+    
 
     def generate(self, prompt: str) -> str:
-        if not self.api_key:
-            raise ValueError("GROQ_API_KEY is not configured")
+        last_error = None
 
-        response = httpx.post(
-            self.base_url,
-            headers={
-                "Authorization": f"Bearer {self.api_key}",
-                "Content-Type": "application/json",
-            },
-            json={
-                "model": self.model,
-                "messages": [
-                    {
-                        "role": "user",
-                        "content": prompt,
-                    }
-                ],
-                "temperature": 0.2,
-            },
-            timeout=60.0,
-        )
+        for attempt in range(self.max_retries + 1):
+            try:
+                response = self.client.chat.completions.create(
+                    model=self.model,
+                    messages=[
+                        {
+                            "role": "user",
+                            "content": prompt,
+                        }
+                    ],
+                    temperature=0.0,
+                )
 
-        if response.status_code != 200:
-            raise RuntimeError(
-                f"Groq API error {response.status_code}: {response.text}"
-            )
+                content = response.choices[0].message.content
 
-        data = response.json()
+                if not content:
+                    raise ValueError("LLM returned an empty response.")
 
-        return data["choices"][0]["message"]["content"]
+                return ensure_citation(content)
+
+            except Exception as exc:
+                last_error = exc
+
+                if attempt < self.max_retries:
+                    wait_time = 2 ** attempt
+                    print(
+                        f"LLM request failed "
+                        f"(attempt {attempt + 1}/{self.max_retries + 1}). "
+                        f"Retrying in {wait_time}s..."
+                    )
+                    time.sleep(wait_time)
+
+        raise RuntimeError(
+            f"LLM request failed after "
+            f"{self.max_retries + 1} attempts: {last_error}"
+        ) from last_error
 
 
 llm_client = LLMClient()

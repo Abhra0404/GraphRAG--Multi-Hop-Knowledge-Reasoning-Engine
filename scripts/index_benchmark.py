@@ -1,31 +1,25 @@
 from pathlib import Path
-import sys
 import uuid
 
 from qdrant_client.models import PointStruct
 
 from embeddings.embedder import embed_texts
-from embeddings.vector_store import create_collection, upsert_chunks
+from embeddings.vector_store import (
+    create_collection,
+    upsert_chunks,
+)
 from ingestion.chunker import TextChunker
 from ingestion.cleaner import clean_text
 from ingestion.loader import loader
 
 
-COLLECTION_NAME = "document_chunks"
+COLLECTION_NAME = "benchmark_chunks"
 
 
 def main():
-    if len(sys.argv) != 2:
-        print(
-            "Usage: python -m scripts.index_document <file>"
-        )
-        raise SystemExit(1)
-
-    file_path = Path(sys.argv[1])
-
-    if not file_path.exists():
-        print(f"File not found: {file_path}")
-        raise SystemExit(1)
+    file_path = Path(
+        "evaluation/benchmark/data/benchmark_corpus.txt"
+    )
 
     text = loader.load(str(file_path))
     text = clean_text(text)
@@ -51,7 +45,7 @@ def main():
                 id=str(
                     uuid.uuid5(
                         uuid.NAMESPACE_URL,
-                        f"{file_path.name}:{chunk.chunk_index}",
+                        f"benchmark:{file_path.name}:{chunk.chunk_index}",
                     )
                 ),
                 vector=embedding,
@@ -59,6 +53,7 @@ def main():
                     "content": chunk.content,
                     "chunk_index": chunk.chunk_index,
                     "source": file_path.name,
+                    "dataset": "benchmark",
                 },
             )
         )
@@ -68,8 +63,9 @@ def main():
         collection_name=COLLECTION_NAME,
     )
 
-    print(f"Indexed {len(points)} chunks.")
-    print(f"Source: {file_path}")
+    print(
+        f"Indexed {len(points)} benchmark chunks."
+    )
 
 
 if __name__ == "__main__":

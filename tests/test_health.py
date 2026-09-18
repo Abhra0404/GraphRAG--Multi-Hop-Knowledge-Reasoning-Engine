@@ -19,4 +19,3 @@ def test_health():
     assert "postgres" in data["services"]
     assert "neo4j" in data["services"]
     assert "qdrant" in data["services"]
-    assert "redis" in data["services"]

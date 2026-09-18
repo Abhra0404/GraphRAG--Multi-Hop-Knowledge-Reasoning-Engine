@@ -1,7 +1,6 @@
 from sqlalchemy import text
 
 from core.database import engine
-from core.redis import redis_client
 from embeddings.vector_store import qdrant_client
 from graph.client import neo4j_client
 
@@ -27,20 +26,11 @@ def check_qdrant() -> bool:
     except Exception:
         return False
 
-
-def check_redis() -> bool:
-    try:
-        return redis_client.ping()
-    except Exception:
-        return False
-
-
 def check_all_services():
     services = {
         "postgres": check_postgres(),
         "neo4j": check_neo4j(),
         "qdrant": check_qdrant(),
-        "redis": check_redis(),
     }
 
     status = (

@@ -7,7 +7,10 @@ from generation.llm import llm_client
 PLANNER_PROMPT = """
 You are a query planner for a knowledge graph.
 
-Analyze the user's question and return ONLY valid JSON:
+Return ONLY a JSON object. Do not provide explanations, markdown, or
+text before or after the JSON.
+
+Format:
 
 {{
   "entities": ["entity 1", "entity 2"],
@@ -26,10 +29,42 @@ Rules:
 - Keep simple questions to one sub-query.
 - Use concise uppercase relationship names.
 - Do not determine graph hops.
+- If no graph relationship is relevant, use an empty relationship_types list.
 
 Question:
 {query}
 """.strip()
+
+
+def _extract_json(response: str) -> dict:
+    response = response.strip()
+
+    # Remove markdown code fences.
+    response = re.sub(
+        r"```(?:json)?",
+        "",
+        response,
+        flags=re.IGNORECASE,
+    )
+    response = response.replace("```", "").strip()
+
+    # Find the JSON object even if the model added explanations.
+    start = response.find("{")
+    end = response.rfind("}")
+
+    if start == -1 or end == -1 or end <= start:
+        raise ValueError(
+            f"LLM returned no JSON object: {response}"
+        )
+
+    json_text = response[start : end + 1]
+
+    try:
+        return json.loads(json_text)
+    except json.JSONDecodeError as exc:
+        raise ValueError(
+            f"LLM returned invalid query plan: {response}"
+        ) from exc
 
 
 def _estimate_hops(
@@ -64,16 +99,11 @@ def plan_query(query: str) -> dict:
 
     response = llm_client.generate(prompt)
 
-    try:
-        plan = json.loads(response)
-    except json.JSONDecodeError as exc:
-        raise ValueError(
-            f"LLM returned invalid query plan: {response}"
-        ) from exc
+    plan = _extract_json(response)
 
     sub_queries = plan.get("sub_queries", [])
 
-    if not sub_queries:
+    if not isinstance(sub_queries, list) or not sub_queries:
         sub_queries = [query]
 
     return {
@@ -88,10 +118,7 @@ def plan_query(query: str) -> dict:
             1,
             min(
                 3,
-                _estimate_hops(
-                    query,
-                    sub_queries,
-                ),
+                _estimate_hops(query, sub_queries),
             ),
         ),
     }

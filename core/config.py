@@ -16,10 +16,8 @@ class Settings(BaseSettings):
 
     qdrant_url: str = "http://localhost:6333"
 
-    redis_url: str = "redis://localhost:6379/0"
-
-    groq_api_key: str = ""
-    llm_model: str = "openai/gpt-oss-20b"
+    gemini_api_key: str = ""
+    llm_model: str = "gemini-3.8-flash"
     model_name: str = "gpt-5.6"
     embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
 

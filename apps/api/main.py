@@ -8,7 +8,6 @@ from apps.api.routes.query import router as query_router
 from core.config import settings
 from core.database import engine
 from core.logging import setup_logging
-from core.redis import verify_connection
 from graph.client import neo4j_client
 
 
@@ -52,7 +51,6 @@ def health():
             "postgres": verify_postgres_connection(),
             "neo4j": neo4j_client.verify_connection(),
             "qdrant": verify_qdrant_connection(),
-            "redis": verify_connection(),
         },
     }
 

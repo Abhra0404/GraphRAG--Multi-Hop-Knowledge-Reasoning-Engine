@@ -17,7 +17,9 @@ qdrant_client = QdrantClient(
 )
 
 
-def create_collection() -> None:
+def create_collection(
+    collection_name: str = COLLECTION_NAME,
+) -> None:
     collections = qdrant_client.get_collections()
 
     existing = {
@@ -25,11 +27,11 @@ def create_collection() -> None:
         for collection in collections.collections
     }
 
-    if COLLECTION_NAME in existing:
+    if collection_name in existing:
         return
 
     qdrant_client.create_collection(
-        collection_name=COLLECTION_NAME,
+        collection_name=collection_name,
         vectors_config=VectorParams(
             size=embedding_dimension(),
             distance=Distance.COSINE,
@@ -39,12 +41,13 @@ def create_collection() -> None:
 
 def upsert_chunks(
     points: list[PointStruct],
+    collection_name: str = COLLECTION_NAME,
 ) -> None:
     if not points:
         return
 
     qdrant_client.upsert(
-        collection_name=COLLECTION_NAME,
+        collection_name=collection_name,
         points=points,
     )
 
@@ -52,9 +55,10 @@ def upsert_chunks(
 def search(
     query_vector: list[float],
     limit: int = 5,
+    collection_name: str = COLLECTION_NAME,
 ):
     return qdrant_client.query_points(
-        collection_name=COLLECTION_NAME,
+        collection_name=collection_name,
         query=query_vector,
         limit=limit,
     ).points

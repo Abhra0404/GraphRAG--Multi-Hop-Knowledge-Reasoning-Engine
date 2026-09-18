@@ -1,0 +1,113 @@
+{
+  "total_cases": 15,
+  "answer_correctness": 1.0,
+  "citation_presence": 1.0,
+  "graph_evidence_usage": 1.0,
+  "cases": [
+    {
+      "id": "swish_01",
+      "type": "1-hop",
+      "correct": true,
+      "citation_present": true,
+      "graph_evidence_used": true
+    },
+    {
+      "id": "swish_02",
+      "type": "1-hop",
+      "correct": true,
+      "citation_present": true,
+      "graph_evidence_used": true
+    },
+    {
+      "id": "swish_03",
+      "type": "1-hop",
+      "correct": true,
+      "citation_present": true,
+      "graph_evidence_used": true
+    },
+    {
+      "id": "swish_04",
+      "type": "1-hop",
+      "correct": true,
+      "citation_present": true,
+      "graph_evidence_used": true
+    },
+    {
+      "id": "swish_05",
+      "type": "1-hop",
+      "correct": true,
+      "citation_present": true,
+      "graph_evidence_used": true
+    },
+    {
+      "id": "swish_06",
+      "type": "2-hop",
+      "correct": true,
+      "citation_present": true,
+      "graph_evidence_used": true
+    },
+    {
+      "id": "swish_07",
+      "type": "2-hop",
+      "correct": true,
+      "citation_present": true,
+      "graph_evidence_used": true
+    },
+    {
+      "id": "swish_08",
+      "type": "2-hop",
+      "correct": true,
+      "citation_present": true,
+      "graph_evidence_used": true
+    },
+    {
+      "id": "swish_09",
+      "type": "2-hop",
+      "correct": true,
+      "citation_present": true,
+      "graph_evidence_used": true
+    },
+    {
+      "id": "swish_10",
+      "type": "2-hop",
+      "correct": true,
+      "citation_present": true,
+      "graph_evidence_used": true
+    },
+    {
+      "id": "swish_11",
+      "type": "3-hop",
+      "correct": true,
+      "citation_present": true,
+      "graph_evidence_used": true
+    },
+    {
+      "id": "swish_12",
+      "type": "3-hop",
+      "correct": true,
+      "citation_present": true,
+      "graph_evidence_used": true
+    },
+    {
+      "id": "swish_13",
+      "type": "3-hop",
+      "correct": true,
+      "citation_present": true,
+      "graph_evidence_used": true
+    },
+    {
+      "id": "swish_14",
+      "type": "3-hop",
+      "correct": true,
+      "citation_present": true,
+      "graph_evidence_used": true
+    },
+    {
+      "id": "swish_15",
+      "type": "3-hop",
+      "correct": true,
+      "citation_present": true,
+      "graph_evidence_used": true
+    }
+  ]
+}

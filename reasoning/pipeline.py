@@ -31,6 +31,7 @@ def answer_query(query: str) -> dict:
         text_evidence=evidence_bundle.text,
         graph_results=retrieval_results["graph"],
         reasoning_chains=evidence_bundle.chains,
+        metadata=retrieval_results["metadata"],
     )
 
     prompt = build_prompt(

@@ -1,0 +1,77 @@
+[
+  {
+    "id": "swish_01",
+    "question": "What is the Swish activation function?",
+    "type": "1-hop"
+  },
+  {
+    "id": "swish_02",
+    "question": "What activation function is Swish compared against most directly in the paper?",
+    "type": "1-hop"
+  },
+  {
+    "id": "swish_03",
+    "question": "Who developed the Swish activation function?",
+    "type": "1-hop"
+  },
+  {
+    "id": "swish_04",
+    "question": "What is the mathematical formula for Swish?",
+    "type": "1-hop"
+  },
+  {
+    "id": "swish_05",
+    "question": "What property of Swish allows it to be used as a replacement for ReLU?",
+    "type": "1-hop"
+  },
+  {
+    "id": "swish_06",
+    "question": "How is Swish related to ReLU?",
+    "type": "2-hop"
+  },
+  {
+    "id": "swish_07",
+    "question": "Why did the authors investigate alternatives to ReLU?",
+    "type": "2-hop"
+  },
+  {
+    "id": "swish_08",
+    "question": "What empirical evidence does the paper provide for Swish outperforming ReLU?",
+    "type": "2-hop"
+  },
+  {
+    "id": "swish_09",
+    "question": "Which neural network architectures were evaluated using Swish?",
+    "type": "2-hop"
+  },
+  {
+    "id": "swish_10",
+    "question": "How does the shape of Swish contribute to its behavior compared with ReLU?",
+    "type": "2-hop"
+  },
+  {
+    "id": "swish_11",
+    "question": "How does the development of Swish relate to the authors' search for activation functions that improve neural network performance?",
+    "type": "3-hop"
+  },
+  {
+    "id": "swish_12",
+    "question": "How does Swish's mathematical formulation relate to its performance compared with ReLU?",
+    "type": "3-hop"
+  },
+  {
+    "id": "swish_13",
+    "question": "What experimental results support the claim that Swish can replace ReLU in existing neural networks?",
+    "type": "3-hop"
+  },
+  {
+    "id": "swish_14",
+    "question": "How do the experiments connect Swish's activation properties with its performance across different models?",
+    "type": "3-hop"
+  },
+  {
+    "id": "swish_15",
+    "question": "What is the overall conclusion of the paper about Swish compared with existing activation functions?",
+    "type": "3-hop"
+  }
+]

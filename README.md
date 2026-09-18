@@ -1,250 +1,359 @@
-# GraphRAG -- Multi-Hop Knowledge Reasoning Engine
+# GraphRAG — Multi-Hop Knowledge Reasoning Engine
 
-> A hybrid Retrieval-Augmented Generation system combining vector
-> search, knowledge graphs, and multi-hop reasoning.
+> A hybrid Retrieval-Augmented Generation system combining semantic retrieval, knowledge graphs, and multi-hop reasoning to produce grounded, explainable answers.
 
 ## Overview
 
-GraphRAG combines two complementary retrieval paradigms:
+GraphRAG combines multiple sources of evidence:
 
-``` text
-Vector Retrieval
-      +
-Knowledge Graph Retrieval
-      +
-Multi-Hop Reasoning
-      ↓
-Grounded LLM Answers
+```mermaid
+flowchart LR
+    A[User Query] --> B[Query Planner]
+    B --> C[Hybrid Retrieval]
+
+    C --> D[Qdrant]
+    C --> E[Neo4j]
+
+    E --> F[Multi-Hop Reasoning]
+    D --> G[Text Evidence]
+
+    F --> H[Evidence Fusion]
+    G --> H
+
+    H --> I[LLM]
+    I --> J[Answer + Citations]
 ```
 
-Instead of relying exclusively on semantic similarity, the system can
-follow explicit relationships between entities to answer questions
-requiring multiple reasoning steps.
+Unlike vanilla vector RAG, GraphRAG can explicitly traverse relationships between entities to support multi-hop reasoning.
 
-------------------------------------------------------------------------
+---
 
-## Example
+## Knowledge Graph
 
-A traditional RAG system might retrieve documents mentioning:
+The knowledge graph is stored in Neo4j and contains entities, relationships,
+and source provenance extracted from the documents.
 
-``` text
-Company
-Founder
-University
-```
+![Neo4j Knowledge Graph](visualisation.png)
 
-GraphRAG can connect:
-
-``` text
-Company
-   ↓ founded_by
-Founder
-   ↓ studied_at
-University
-```
-
-For more complex questions:
-
-``` text
-Company
-   ↓ founded_by
-Founder
-   ↓ studied_at
-University
-   ↓ known_for
-Research Field
-```
-
-The system returns both the answer and the supporting reasoning path.
-
-------------------------------------------------------------------------
-
-## Architecture
-
-``` text
-                        Query
-                          │
-                          ▼
-                   Query Analyzer
-                          │
-                ┌─────────┴─────────┐
-                ▼                   ▼
-         Vector Retrieval      Graph Retrieval
-                │                   │
-                │              Multi-Hop Search
-                │                   │
-                └─────────┬─────────┘
-                          ▼
-                    Evidence Fusion
-                          │
-                          ▼
-                    Context Builder
-                          │
-                          ▼
-                          LLM
-                          │
-                          ▼
-                 Answer + Evidence
-```
-
-------------------------------------------------------------------------
+---
 
 ## Technology Stack
 
--   Python
--   FastAPI
--   PostgreSQL
--   Neo4j
--   Qdrant
--   Redis
--   Docker
--   Pytest
--   LLM API
--   Sentence-transformers
+| Component           | Technology            |
+| ------------------- | --------------------- |
+| Language            | Python                |
+| API                 | FastAPI               |
+| Relational Database | PostgreSQL            |
+| Knowledge Graph     | Neo4j                 |
+| Vector Database     | Qdrant                |
+| Embeddings          | Sentence Transformers |
+| LLM                 | Ollama                |
+| PDF Processing      | PyMuPDF               |
+| Testing             | Pytest                |
+| Infrastructure      | Docker                |
 
-------------------------------------------------------------------------
+---
 
-## Development Roadmap
+## Pipeline
 
-### V0 --- Foundation
+### 1. Document Ingestion
 
-Infrastructure, Docker, APIs, configuration, testing.
+Documents are loaded and processed from supported formats:
 
-### V1 --- Vanilla RAG
-
-Document parsing, chunking, embeddings, Qdrant retrieval, LLM
-generation.
-
-### V2 --- Knowledge Graph
-
-Entity extraction, relation extraction, normalization, Neo4j storage,
-provenance.
-
-### V3 --- Hybrid Retrieval
-
-Combine vector and graph retrieval.
-
-### V4 --- Multi-Hop Reasoning
-
-Query decomposition, hop planning, graph traversal, path ranking.
-
-### V5 --- Advanced Reasoning
-
-Entity disambiguation, reranking, evidence weighting, contradiction
-handling.
-
-### V6 --- Evaluation
-
-Compare vanilla RAG against GraphRAG on multi-hop benchmarks.
-
-------------------------------------------------------------------------
-
-## Key Research Question
-
-> Does combining knowledge-graph traversal with semantic retrieval
-> improve multi-hop question answering compared with vanilla vector RAG?
-
-The project will answer this empirically using retrieval and generation
-metrics.
-
-------------------------------------------------------------------------
-
-## Project Goals
-
--   Build an end-to-end GraphRAG pipeline.
--   Understand knowledge graphs and graph databases.
--   Implement hybrid retrieval.
--   Implement multi-hop reasoning.
--   Preserve evidence provenance.
--   Produce explainable answers.
--   Quantitatively evaluate the system.
--   Explore learned graph/path ranking as an advanced extension.
-
-------------------------------------------------------------------------
-
-## Example API Response
-
-``` json
-{
-  "answer": "University X",
-  "confidence": 0.91,
-  "entities": [
-    "Company A",
-    "Founder B",
-    "University X"
-  ],
-  "reasoning_path": [
-    {
-      "from": "Company A",
-      "relation": "FOUNDED_BY",
-      "to": "Founder B"
-    },
-    {
-      "from": "Founder B",
-      "relation": "STUDIED_AT",
-      "to": "University X"
-    }
-  ],
-  "sources": [
-    "document_12",
-    "document_31"
-  ]
-}
+```text
+PDF / TXT / Markdown
+        ↓
+     Parser
+        ↓
+     Cleaner
+        ↓
+     Chunker
 ```
 
-------------------------------------------------------------------------
+### 2. Vector Indexing
 
-## Repository Structure
-
-``` text
-graphrag/
-├── apps/
-├── core/
-├── ingestion/
-├── embeddings/
-├── extraction/
-├── graph/
-├── retrieval/
-├── reasoning/
-├── generation/
-├── evaluation/
-├── tests/
-├── scripts/
-├── docker/
-├── docs/
-├── plan.md
-├── learning.md
-├── architecture.md
-└── README.md
+```text
+Text Chunks
+    ↓
+Sentence Transformer
+    ↓
+Embeddings
+    ↓
+Qdrant
 ```
 
-------------------------------------------------------------------------
+### 3. Knowledge Graph Construction
 
-## Status
-
-**Phase:** Planning
-
-**Current milestone:** V0 --- Foundation
-
-------------------------------------------------------------------------
-
-## Long-Term Direction
-
-The initial system will use deterministic graph traversal and
-heuristic/path scoring.
-
-A future research version can introduce:
-
-``` text
-Candidate Graph Paths
-        ↓
-Neural Path Ranker
-        ↓
-Best Evidence Paths
-        ↓
-LLM
+```text
+Document
+   ↓
+Entity Extraction
+   ↓
+Relationship Extraction
+   ↓
+Entity / Relation Normalization
+   ↓
+Neo4j
 ```
 
-Potential extensions include graph neural networks, knowledge graph
-embeddings, learned retrieval, and reinforcement learning for graph
-traversal.
+Graph entities and relationships retain source-document and source-chunk provenance.
+
+### 4. Query Processing
+
+```text
+Query
+  ↓
+Query Planner
+  ↓
+Entities
+Relationships
+Sub-queries
+Maximum Hops
+```
+
+Entities are linked against the appropriate graph dataset before graph retrieval.
+
+### 5. Hybrid Retrieval
+
+Both retrieval systems contribute evidence:
+
+```text
+                    Query
+                      │
+             ┌────────┴────────┐
+             ▼                 ▼
+        Qdrant Search      Neo4j Search
+             │                 │
+             ▼                 ▼
+        Text Evidence      Graph Paths
+             │                 │
+             └────────┬────────┘
+                      ▼
+                Evidence Fusion
+```
+
+### 6. Answer Generation
+
+The final context contains:
+
+* Text evidence
+* Graph paths
+* Reasoning chains
+* Document metadata
+* Provenance information
+
+The LLM generates an answer using the supplied evidence and citation labels.
+
+---
+
+## Evaluation
+
+GraphRAG is evaluated using two complementary approaches.
+
+### Controlled Benchmark
+
+A synthetic multi-hop benchmark was created to isolate the retrieval problem.
+
+The final benchmark contains:
+
+* 110 positive queries
+* 1-hop, 2-hop, and 3-hop questions
+* Controlled graph relationships
+* Vanilla vector RAG baseline
+* GraphRAG comparison
+
+#### Exact-Path Recall
+
+| Query Type | Vanilla RAG | GraphRAG |
+| ---------- | ----------: | -------: |
+| 1-hop      |         49% |     100% |
+| 2-hop      |         53% |     100% |
+| 3-hop      |         51% |      97% |
+| Overall    |         51% |      99% |
+
+GraphRAG achieved **99% exact-path recall compared with 51% for vanilla vector RAG** on the controlled benchmark.
+
+> The benchmark is synthetic and controlled, so these results demonstrate system behavior under the benchmark's defined conditions rather than general real-world performance.
+
+---
+
+## Real-Paper Evaluation
+
+The system was also evaluated against the **Swish: A Self-Gated Activation Function** research paper.
+
+The evaluation contains 15 questions covering:
+
+* Definitions
+* Mathematical formulation
+* Comparison with ReLU
+* Authors
+* Activation properties
+* Experimental evidence
+* Neural network architectures
+* Multi-step reasoning
+* Overall conclusions
+
+The evaluation checks:
+
+```text
+Answer Correctness
+Citation Presence
+Graph Evidence Usage
+```
+
+Final evaluation target:
+
+```text
+15 / 15 questions completed
+Answer correctness: 100%
+Citation presence: 100%
+Graph evidence usage: 100%
+```
+
+The real-paper evaluator uses concept/keyword matching rather than human evaluation, so these metrics should be interpreted accordingly.
+
+---
+
+## Example
+
+A multi-hop query can be represented as:
+
+```text
+Company
+   │
+   └── FOUNDED_BY
+          │
+          ▼
+       Founder
+          │
+          └── STUDIED_AT
+                 │
+                 ▼
+             University
+```
+
+GraphRAG can retrieve the connected path and provide the supporting evidence alongside the generated answer.
+
+---
+
+## Running the Project
+
+### 1. Clone the repository
+
+```bash
+git clone <repository-url>
+cd graphrag
+```
+
+### 2. Create the environment
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+On Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Start infrastructure
+
+```bash
+docker compose up -d
+```
+
+This starts:
+
+```text
+PostgreSQL
+Neo4j
+Qdrant
+```
+
+### 5. Start Ollama
+
+Make sure Ollama is running and the configured model is available:
+
+```bash
+ollama pull llama3.2:3b
+```
+
+### 6. Index a document
+
+```bash
+python -m scripts.index_document data/pdfs/paper.pdf
+```
+
+### 7. Run the API
+
+```bash
+uvicorn apps.api.main:app --reload
+```
+
+---
+
+## Running Evaluation
+
+### Controlled Benchmark
+
+Run the benchmark evaluation using the scripts inside:
+
+```text
+evaluation/benchmark/
+```
+
+### Real-Paper Evaluation
+
+Run:
+
+```bash
+python -m evaluation.real.runner
+```
+
+Then:
+
+```bash
+python -m evaluation.real.evaluator
+```
+
+---
+
+## Research Question
+
+> Does combining knowledge-graph traversal with semantic retrieval improve multi-hop question answering compared with vanilla vector RAG?
+
+The project evaluates this through controlled retrieval experiments and real-document question answering.
+
+---
+
+
+---
+
+## Limitations
+
+Current limitations include:
+
+* Knowledge graph extraction depends on LLM-generated entities and relationships.
+* Graph traversal currently uses deterministic traversal and heuristic ranking.
+* The real-paper evaluator uses automated concept matching rather than human judgment.
+* The controlled benchmark is synthetic.
+* Local LLM inference can be slower than hosted inference.
+* Citation presence does not by itself guarantee citation correctness.
+
+---
+
+
+## License
+
+This project is open source and available under the MIT License.
+
+> Stay focused, stay productive, and keep leveling up! — kaizenX out. ✌️
+

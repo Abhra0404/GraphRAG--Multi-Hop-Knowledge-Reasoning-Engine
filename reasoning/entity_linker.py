@@ -1,12 +1,19 @@
 from graph.client import neo4j_client
 
 
-def link_entity(entity: str) -> str | None:
+def link_entity(
+    entity: str,
+    dataset: str = "swish_paper",
+) -> str | None:
     query = """
     MATCH (e:Entity)
-    WHERE toLower(e.name) = toLower($entity)
-       OR toLower(e.name) CONTAINS toLower($entity)
-       OR toLower($entity) CONTAINS toLower(e.name)
+    WHERE
+        e.dataset = $dataset
+        AND (
+            toLower(e.name) = toLower($entity)
+            OR toLower(e.name) CONTAINS toLower($entity)
+            OR toLower($entity) CONTAINS toLower(e.name)
+        )
     RETURN e.name AS name
     LIMIT 1
     """
@@ -15,6 +22,7 @@ def link_entity(entity: str) -> str | None:
         result = session.run(
             query,
             entity=entity,
+            dataset=dataset,
         )
 
         record = result.single()
@@ -25,11 +33,17 @@ def link_entity(entity: str) -> str | None:
     return None
 
 
-def link_entities(entities: list[str]) -> list[str]:
+def link_entities(
+    entities: list[str],
+    dataset: str = "swish_paper",
+) -> list[str]:
     linked = []
 
     for entity in entities:
-        canonical = link_entity(entity)
+        canonical = link_entity(
+            entity,
+            dataset=dataset,
+        )
 
         if canonical and canonical not in linked:
             linked.append(canonical)

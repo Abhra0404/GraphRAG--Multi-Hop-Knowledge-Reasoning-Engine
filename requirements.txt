@@ -10,7 +10,6 @@ alembic
 
 neo4j
 qdrant-client
-redis
 
 httpx
 python-dotenv
