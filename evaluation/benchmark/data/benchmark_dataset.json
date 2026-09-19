@@ -1,0 +1,1703 @@
+[
+  {
+    "id": "single_hop_001",
+    "question": "What developed Albert Einstein?",
+    "expected_entities": [
+      "Albert Einstein"
+    ],
+    "expected_relationships": [
+      "DEVELOPED"
+    ],
+    "expected_answer": "Albert Einstein developed theory of relativity.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_002",
+    "question": "What describes theory of relativity?",
+    "expected_entities": [
+      "theory of relativity"
+    ],
+    "expected_relationships": [
+      "DESCRIBES"
+    ],
+    "expected_answer": "theory of relativity describes spacetime.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_003",
+    "question": "What models spacetime?",
+    "expected_entities": [
+      "spacetime"
+    ],
+    "expected_relationships": [
+      "MODELS"
+    ],
+    "expected_answer": "spacetime models gravity.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_004",
+    "question": "What affects gravity?",
+    "expected_entities": [
+      "gravity"
+    ],
+    "expected_relationships": [
+      "AFFECTS"
+    ],
+    "expected_answer": "gravity affects matter.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_005",
+    "question": "What developed Isaac Newton?",
+    "expected_entities": [
+      "Isaac Newton"
+    ],
+    "expected_relationships": [
+      "DEVELOPED"
+    ],
+    "expected_answer": "Isaac Newton developed laws of motion.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_006",
+    "question": "What describes laws of motion?",
+    "expected_entities": [
+      "laws of motion"
+    ],
+    "expected_relationships": [
+      "DESCRIBES"
+    ],
+    "expected_answer": "laws of motion describes forces.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_007",
+    "question": "What affect forces?",
+    "expected_entities": [
+      "forces"
+    ],
+    "expected_relationships": [
+      "AFFECT"
+    ],
+    "expected_answer": "forces affect movement.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_008",
+    "question": "What occurs in movement?",
+    "expected_entities": [
+      "movement"
+    ],
+    "expected_relationships": [
+      "OCCURS_IN"
+    ],
+    "expected_answer": "movement occurs in spacetime.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_009",
+    "question": "What discovered Marie Curie?",
+    "expected_entities": [
+      "Marie Curie"
+    ],
+    "expected_relationships": [
+      "DISCOVERED"
+    ],
+    "expected_answer": "Marie Curie discovered radioactivity.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_010",
+    "question": "What related to radioactivity?",
+    "expected_entities": [
+      "radioactivity"
+    ],
+    "expected_relationships": [
+      "RELATED_TO"
+    ],
+    "expected_answer": "radioactivity related to nuclear physics.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_011",
+    "question": "What studies nuclear physics?",
+    "expected_entities": [
+      "nuclear physics"
+    ],
+    "expected_relationships": [
+      "STUDIES"
+    ],
+    "expected_answer": "nuclear physics studies atomic nuclei.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_012",
+    "question": "What contain atomic nuclei?",
+    "expected_entities": [
+      "atomic nuclei"
+    ],
+    "expected_relationships": [
+      "CONTAIN"
+    ],
+    "expected_answer": "atomic nuclei contain protons.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_013",
+    "question": "What worked on Nikola Tesla?",
+    "expected_entities": [
+      "Nikola Tesla"
+    ],
+    "expected_relationships": [
+      "WORKED_ON"
+    ],
+    "expected_answer": "Nikola Tesla worked on electrical engineering.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_014",
+    "question": "What uses electrical engineering?",
+    "expected_entities": [
+      "electrical engineering"
+    ],
+    "expected_relationships": [
+      "USES"
+    ],
+    "expected_answer": "electrical engineering uses electromagnetism.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_015",
+    "question": "What developed James Clerk Maxwell?",
+    "expected_entities": [
+      "James Clerk Maxwell"
+    ],
+    "expected_relationships": [
+      "DEVELOPED"
+    ],
+    "expected_answer": "James Clerk Maxwell developed electromagnetism.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_016",
+    "question": "What describes electromagnetism?",
+    "expected_entities": [
+      "electromagnetism"
+    ],
+    "expected_relationships": [
+      "DESCRIBES"
+    ],
+    "expected_answer": "electromagnetism describes electric fields.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_017",
+    "question": "What affect electric fields?",
+    "expected_entities": [
+      "electric fields"
+    ],
+    "expected_relationships": [
+      "AFFECT"
+    ],
+    "expected_answer": "electric fields affect charged particles.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_018",
+    "question": "What worked on Ada Lovelace?",
+    "expected_entities": [
+      "Ada Lovelace"
+    ],
+    "expected_relationships": [
+      "WORKED_ON"
+    ],
+    "expected_answer": "Ada Lovelace worked on mathematical computing.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_019",
+    "question": "What influenced mathematical computing?",
+    "expected_entities": [
+      "mathematical computing"
+    ],
+    "expected_relationships": [
+      "INFLUENCED"
+    ],
+    "expected_answer": "mathematical computing influenced computing.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_020",
+    "question": "What worked on Alan Turing?",
+    "expected_entities": [
+      "Alan Turing"
+    ],
+    "expected_relationships": [
+      "WORKED_ON"
+    ],
+    "expected_answer": "Alan Turing worked on computing.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_021",
+    "question": "What influenced computing?",
+    "expected_entities": [
+      "computing"
+    ],
+    "expected_relationships": [
+      "INFLUENCED"
+    ],
+    "expected_answer": "computing influenced artificial intelligence.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_022",
+    "question": "What uses artificial intelligence?",
+    "expected_entities": [
+      "artificial intelligence"
+    ],
+    "expected_relationships": [
+      "USES"
+    ],
+    "expected_answer": "artificial intelligence uses machine learning.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_023",
+    "question": "What uses machine learning?",
+    "expected_entities": [
+      "machine learning"
+    ],
+    "expected_relationships": [
+      "USES"
+    ],
+    "expected_answer": "machine learning uses neural networks.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_024",
+    "question": "What developed Charles Darwin?",
+    "expected_entities": [
+      "Charles Darwin"
+    ],
+    "expected_relationships": [
+      "DEVELOPED"
+    ],
+    "expected_answer": "Charles Darwin developed evolution.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_025",
+    "question": "What explains evolution?",
+    "expected_entities": [
+      "evolution"
+    ],
+    "expected_relationships": [
+      "EXPLAINS"
+    ],
+    "expected_answer": "evolution explains natural selection.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_026",
+    "question": "What affects natural selection?",
+    "expected_entities": [
+      "natural selection"
+    ],
+    "expected_relationships": [
+      "AFFECTS"
+    ],
+    "expected_answer": "natural selection affects populations.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_027",
+    "question": "What change over time populations?",
+    "expected_entities": [
+      "populations"
+    ],
+    "expected_relationships": [
+      "CHANGE_OVER_TIME"
+    ],
+    "expected_answer": "populations change over time species.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_028",
+    "question": "What worked on Katherine Johnson?",
+    "expected_entities": [
+      "Katherine Johnson"
+    ],
+    "expected_relationships": [
+      "WORKED_ON"
+    ],
+    "expected_answer": "Katherine Johnson worked on space science.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_029",
+    "question": "What uses space science?",
+    "expected_entities": [
+      "space science"
+    ],
+    "expected_relationships": [
+      "USES"
+    ],
+    "expected_answer": "space science uses mathematics.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_030",
+    "question": "What supports mathematics?",
+    "expected_entities": [
+      "mathematics"
+    ],
+    "expected_relationships": [
+      "SUPPORTS"
+    ],
+    "expected_answer": "mathematics supports scientific modeling.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_031",
+    "question": "What uses scientific modeling?",
+    "expected_entities": [
+      "scientific modeling"
+    ],
+    "expected_relationships": [
+      "USES"
+    ],
+    "expected_answer": "scientific modeling uses computing.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_032",
+    "question": "What worked on Grace Hopper?",
+    "expected_entities": [
+      "Grace Hopper"
+    ],
+    "expected_relationships": [
+      "WORKED_ON"
+    ],
+    "expected_answer": "Grace Hopper worked on computing.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_033",
+    "question": "What enables computing?",
+    "expected_entities": [
+      "computing"
+    ],
+    "expected_relationships": [
+      "ENABLES"
+    ],
+    "expected_answer": "computing enables software.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_034",
+    "question": "What runs on software?",
+    "expected_entities": [
+      "software"
+    ],
+    "expected_relationships": [
+      "RUNS_ON"
+    ],
+    "expected_answer": "software runs on computers.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_035",
+    "question": "What influenced theory of relativity?",
+    "expected_entities": [
+      "theory of relativity"
+    ],
+    "expected_relationships": [
+      "INFLUENCED"
+    ],
+    "expected_answer": "theory of relativity influenced modern physics.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_036",
+    "question": "What uses modern physics?",
+    "expected_entities": [
+      "modern physics"
+    ],
+    "expected_relationships": [
+      "USES"
+    ],
+    "expected_answer": "modern physics uses mathematics.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "single_hop_037",
+    "question": "What supports mathematics?",
+    "expected_entities": [
+      "mathematics"
+    ],
+    "expected_relationships": [
+      "SUPPORTS"
+    ],
+    "expected_answer": "mathematics supports machine learning.",
+    "required_hops": 1,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_001_001",
+    "question": "How is Albert Einstein connected to spacetime?",
+    "expected_entities": [
+      "Albert Einstein",
+      "spacetime"
+    ],
+    "expected_relationships": [
+      "DEVELOPED",
+      "DESCRIBES"
+    ],
+    "expected_answer": "Albert Einstein developed theory of relativity, which describes spacetime.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_001_002",
+    "question": "How is Albert Einstein connected to modern physics?",
+    "expected_entities": [
+      "Albert Einstein",
+      "modern physics"
+    ],
+    "expected_relationships": [
+      "DEVELOPED",
+      "INFLUENCED"
+    ],
+    "expected_answer": "Albert Einstein developed theory of relativity, which influenced modern physics.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_002_003",
+    "question": "How is theory of relativity connected to gravity?",
+    "expected_entities": [
+      "theory of relativity",
+      "gravity"
+    ],
+    "expected_relationships": [
+      "DESCRIBES",
+      "MODELS"
+    ],
+    "expected_answer": "theory of relativity describes spacetime, which models gravity.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_003_004",
+    "question": "How is spacetime connected to matter?",
+    "expected_entities": [
+      "spacetime",
+      "matter"
+    ],
+    "expected_relationships": [
+      "MODELS",
+      "AFFECTS"
+    ],
+    "expected_answer": "spacetime models gravity, which affects matter.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_005_005",
+    "question": "How is Isaac Newton connected to forces?",
+    "expected_entities": [
+      "Isaac Newton",
+      "forces"
+    ],
+    "expected_relationships": [
+      "DEVELOPED",
+      "DESCRIBES"
+    ],
+    "expected_answer": "Isaac Newton developed laws of motion, which describes forces.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_006_006",
+    "question": "How is laws of motion connected to movement?",
+    "expected_entities": [
+      "laws of motion",
+      "movement"
+    ],
+    "expected_relationships": [
+      "DESCRIBES",
+      "AFFECT"
+    ],
+    "expected_answer": "laws of motion describes forces, which affect movement.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_007_007",
+    "question": "How is forces connected to spacetime?",
+    "expected_entities": [
+      "forces",
+      "spacetime"
+    ],
+    "expected_relationships": [
+      "AFFECT",
+      "OCCURS_IN"
+    ],
+    "expected_answer": "forces affect movement, which occurs in spacetime.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_008_008",
+    "question": "How is movement connected to gravity?",
+    "expected_entities": [
+      "movement",
+      "gravity"
+    ],
+    "expected_relationships": [
+      "OCCURS_IN",
+      "MODELS"
+    ],
+    "expected_answer": "movement occurs in spacetime, which models gravity.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_009_009",
+    "question": "How is Marie Curie connected to nuclear physics?",
+    "expected_entities": [
+      "Marie Curie",
+      "nuclear physics"
+    ],
+    "expected_relationships": [
+      "DISCOVERED",
+      "RELATED_TO"
+    ],
+    "expected_answer": "Marie Curie discovered radioactivity, which related to nuclear physics.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_010_010",
+    "question": "How is radioactivity connected to atomic nuclei?",
+    "expected_entities": [
+      "radioactivity",
+      "atomic nuclei"
+    ],
+    "expected_relationships": [
+      "RELATED_TO",
+      "STUDIES"
+    ],
+    "expected_answer": "radioactivity related to nuclear physics, which studies atomic nuclei.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_011_011",
+    "question": "How is nuclear physics connected to protons?",
+    "expected_entities": [
+      "nuclear physics",
+      "protons"
+    ],
+    "expected_relationships": [
+      "STUDIES",
+      "CONTAIN"
+    ],
+    "expected_answer": "nuclear physics studies atomic nuclei, which contain protons.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_013_012",
+    "question": "How is Nikola Tesla connected to electromagnetism?",
+    "expected_entities": [
+      "Nikola Tesla",
+      "electromagnetism"
+    ],
+    "expected_relationships": [
+      "WORKED_ON",
+      "USES"
+    ],
+    "expected_answer": "Nikola Tesla worked on electrical engineering, which uses electromagnetism.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_014_013",
+    "question": "How is electrical engineering connected to electric fields?",
+    "expected_entities": [
+      "electrical engineering",
+      "electric fields"
+    ],
+    "expected_relationships": [
+      "USES",
+      "DESCRIBES"
+    ],
+    "expected_answer": "electrical engineering uses electromagnetism, which describes electric fields.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_015_014",
+    "question": "How is James Clerk Maxwell connected to electric fields?",
+    "expected_entities": [
+      "James Clerk Maxwell",
+      "electric fields"
+    ],
+    "expected_relationships": [
+      "DEVELOPED",
+      "DESCRIBES"
+    ],
+    "expected_answer": "James Clerk Maxwell developed electromagnetism, which describes electric fields.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_016_015",
+    "question": "How is electromagnetism connected to charged particles?",
+    "expected_entities": [
+      "electromagnetism",
+      "charged particles"
+    ],
+    "expected_relationships": [
+      "DESCRIBES",
+      "AFFECT"
+    ],
+    "expected_answer": "electromagnetism describes electric fields, which affect charged particles.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_018_016",
+    "question": "How is Ada Lovelace connected to computing?",
+    "expected_entities": [
+      "Ada Lovelace",
+      "computing"
+    ],
+    "expected_relationships": [
+      "WORKED_ON",
+      "INFLUENCED"
+    ],
+    "expected_answer": "Ada Lovelace worked on mathematical computing, which influenced computing.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_019_017",
+    "question": "How is mathematical computing connected to artificial intelligence?",
+    "expected_entities": [
+      "mathematical computing",
+      "artificial intelligence"
+    ],
+    "expected_relationships": [
+      "INFLUENCED",
+      "INFLUENCED"
+    ],
+    "expected_answer": "mathematical computing influenced computing, which influenced artificial intelligence.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_019_018",
+    "question": "How is mathematical computing connected to software?",
+    "expected_entities": [
+      "mathematical computing",
+      "software"
+    ],
+    "expected_relationships": [
+      "INFLUENCED",
+      "ENABLES"
+    ],
+    "expected_answer": "mathematical computing influenced computing, which enables software.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_020_019",
+    "question": "How is Alan Turing connected to artificial intelligence?",
+    "expected_entities": [
+      "Alan Turing",
+      "artificial intelligence"
+    ],
+    "expected_relationships": [
+      "WORKED_ON",
+      "INFLUENCED"
+    ],
+    "expected_answer": "Alan Turing worked on computing, which influenced artificial intelligence.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_020_020",
+    "question": "How is Alan Turing connected to software?",
+    "expected_entities": [
+      "Alan Turing",
+      "software"
+    ],
+    "expected_relationships": [
+      "WORKED_ON",
+      "ENABLES"
+    ],
+    "expected_answer": "Alan Turing worked on computing, which enables software.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_021_021",
+    "question": "How is computing connected to machine learning?",
+    "expected_entities": [
+      "computing",
+      "machine learning"
+    ],
+    "expected_relationships": [
+      "INFLUENCED",
+      "USES"
+    ],
+    "expected_answer": "computing influenced artificial intelligence, which uses machine learning.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_022_022",
+    "question": "How is artificial intelligence connected to neural networks?",
+    "expected_entities": [
+      "artificial intelligence",
+      "neural networks"
+    ],
+    "expected_relationships": [
+      "USES",
+      "USES"
+    ],
+    "expected_answer": "artificial intelligence uses machine learning, which uses neural networks.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_024_023",
+    "question": "How is Charles Darwin connected to natural selection?",
+    "expected_entities": [
+      "Charles Darwin",
+      "natural selection"
+    ],
+    "expected_relationships": [
+      "DEVELOPED",
+      "EXPLAINS"
+    ],
+    "expected_answer": "Charles Darwin developed evolution, which explains natural selection.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_025_024",
+    "question": "How is evolution connected to populations?",
+    "expected_entities": [
+      "evolution",
+      "populations"
+    ],
+    "expected_relationships": [
+      "EXPLAINS",
+      "AFFECTS"
+    ],
+    "expected_answer": "evolution explains natural selection, which affects populations.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_026_025",
+    "question": "How is natural selection connected to species?",
+    "expected_entities": [
+      "natural selection",
+      "species"
+    ],
+    "expected_relationships": [
+      "AFFECTS",
+      "CHANGE_OVER_TIME"
+    ],
+    "expected_answer": "natural selection affects populations, which change over time species.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_028_026",
+    "question": "How is Katherine Johnson connected to mathematics?",
+    "expected_entities": [
+      "Katherine Johnson",
+      "mathematics"
+    ],
+    "expected_relationships": [
+      "WORKED_ON",
+      "USES"
+    ],
+    "expected_answer": "Katherine Johnson worked on space science, which uses mathematics.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_029_027",
+    "question": "How is space science connected to scientific modeling?",
+    "expected_entities": [
+      "space science",
+      "scientific modeling"
+    ],
+    "expected_relationships": [
+      "USES",
+      "SUPPORTS"
+    ],
+    "expected_answer": "space science uses mathematics, which supports scientific modeling.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_029_028",
+    "question": "How is space science connected to machine learning?",
+    "expected_entities": [
+      "space science",
+      "machine learning"
+    ],
+    "expected_relationships": [
+      "USES",
+      "SUPPORTS"
+    ],
+    "expected_answer": "space science uses mathematics, which supports machine learning.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_030_029",
+    "question": "How is mathematics connected to computing?",
+    "expected_entities": [
+      "mathematics",
+      "computing"
+    ],
+    "expected_relationships": [
+      "SUPPORTS",
+      "USES"
+    ],
+    "expected_answer": "mathematics supports scientific modeling, which uses computing.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_031_030",
+    "question": "How is scientific modeling connected to artificial intelligence?",
+    "expected_entities": [
+      "scientific modeling",
+      "artificial intelligence"
+    ],
+    "expected_relationships": [
+      "USES",
+      "INFLUENCED"
+    ],
+    "expected_answer": "scientific modeling uses computing, which influenced artificial intelligence.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_031_031",
+    "question": "How is scientific modeling connected to software?",
+    "expected_entities": [
+      "scientific modeling",
+      "software"
+    ],
+    "expected_relationships": [
+      "USES",
+      "ENABLES"
+    ],
+    "expected_answer": "scientific modeling uses computing, which enables software.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_032_032",
+    "question": "How is Grace Hopper connected to artificial intelligence?",
+    "expected_entities": [
+      "Grace Hopper",
+      "artificial intelligence"
+    ],
+    "expected_relationships": [
+      "WORKED_ON",
+      "INFLUENCED"
+    ],
+    "expected_answer": "Grace Hopper worked on computing, which influenced artificial intelligence.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_032_033",
+    "question": "How is Grace Hopper connected to software?",
+    "expected_entities": [
+      "Grace Hopper",
+      "software"
+    ],
+    "expected_relationships": [
+      "WORKED_ON",
+      "ENABLES"
+    ],
+    "expected_answer": "Grace Hopper worked on computing, which enables software.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_033_034",
+    "question": "How is computing connected to computers?",
+    "expected_entities": [
+      "computing",
+      "computers"
+    ],
+    "expected_relationships": [
+      "ENABLES",
+      "RUNS_ON"
+    ],
+    "expected_answer": "computing enables software, which runs on computers.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_035_035",
+    "question": "How is theory of relativity connected to mathematics?",
+    "expected_entities": [
+      "theory of relativity",
+      "mathematics"
+    ],
+    "expected_relationships": [
+      "INFLUENCED",
+      "USES"
+    ],
+    "expected_answer": "theory of relativity influenced modern physics, which uses mathematics.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_036_036",
+    "question": "How is modern physics connected to scientific modeling?",
+    "expected_entities": [
+      "modern physics",
+      "scientific modeling"
+    ],
+    "expected_relationships": [
+      "USES",
+      "SUPPORTS"
+    ],
+    "expected_answer": "modern physics uses mathematics, which supports scientific modeling.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_036_037",
+    "question": "How is modern physics connected to machine learning?",
+    "expected_entities": [
+      "modern physics",
+      "machine learning"
+    ],
+    "expected_relationships": [
+      "USES",
+      "SUPPORTS"
+    ],
+    "expected_answer": "modern physics uses mathematics, which supports machine learning.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "two_hop_037_038",
+    "question": "How is mathematics connected to neural networks?",
+    "expected_entities": [
+      "mathematics",
+      "neural networks"
+    ],
+    "expected_relationships": [
+      "SUPPORTS",
+      "USES"
+    ],
+    "expected_answer": "mathematics supports machine learning, which uses neural networks.",
+    "required_hops": 2,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_001",
+    "question": "What is the connection between Albert Einstein and gravity?",
+    "expected_entities": [
+      "Albert Einstein",
+      "gravity"
+    ],
+    "expected_relationships": [
+      "DEVELOPED",
+      "DESCRIBES",
+      "MODELS"
+    ],
+    "expected_answer": "Albert Einstein developed theory of relativity, which describes spacetime, which models gravity.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_002",
+    "question": "What is the connection between Albert Einstein and mathematics?",
+    "expected_entities": [
+      "Albert Einstein",
+      "mathematics"
+    ],
+    "expected_relationships": [
+      "DEVELOPED",
+      "INFLUENCED",
+      "USES"
+    ],
+    "expected_answer": "Albert Einstein developed theory of relativity, which influenced modern physics, which uses mathematics.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_003",
+    "question": "What is the connection between theory of relativity and matter?",
+    "expected_entities": [
+      "theory of relativity",
+      "matter"
+    ],
+    "expected_relationships": [
+      "DESCRIBES",
+      "MODELS",
+      "AFFECTS"
+    ],
+    "expected_answer": "theory of relativity describes spacetime, which models gravity, which affects matter.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_004",
+    "question": "What is the connection between Isaac Newton and movement?",
+    "expected_entities": [
+      "Isaac Newton",
+      "movement"
+    ],
+    "expected_relationships": [
+      "DEVELOPED",
+      "DESCRIBES",
+      "AFFECT"
+    ],
+    "expected_answer": "Isaac Newton developed laws of motion, which describes forces, which affect movement.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_005",
+    "question": "What is the connection between laws of motion and spacetime?",
+    "expected_entities": [
+      "laws of motion",
+      "spacetime"
+    ],
+    "expected_relationships": [
+      "DESCRIBES",
+      "AFFECT",
+      "OCCURS_IN"
+    ],
+    "expected_answer": "laws of motion describes forces, which affect movement, which occurs in spacetime.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_006",
+    "question": "What is the connection between forces and gravity?",
+    "expected_entities": [
+      "forces",
+      "gravity"
+    ],
+    "expected_relationships": [
+      "AFFECT",
+      "OCCURS_IN",
+      "MODELS"
+    ],
+    "expected_answer": "forces affect movement, which occurs in spacetime, which models gravity.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_007",
+    "question": "What is the connection between movement and matter?",
+    "expected_entities": [
+      "movement",
+      "matter"
+    ],
+    "expected_relationships": [
+      "OCCURS_IN",
+      "MODELS",
+      "AFFECTS"
+    ],
+    "expected_answer": "movement occurs in spacetime, which models gravity, which affects matter.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_008",
+    "question": "What is the connection between Marie Curie and atomic nuclei?",
+    "expected_entities": [
+      "Marie Curie",
+      "atomic nuclei"
+    ],
+    "expected_relationships": [
+      "DISCOVERED",
+      "RELATED_TO",
+      "STUDIES"
+    ],
+    "expected_answer": "Marie Curie discovered radioactivity, which related to nuclear physics, which studies atomic nuclei.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_009",
+    "question": "What is the connection between radioactivity and protons?",
+    "expected_entities": [
+      "radioactivity",
+      "protons"
+    ],
+    "expected_relationships": [
+      "RELATED_TO",
+      "STUDIES",
+      "CONTAIN"
+    ],
+    "expected_answer": "radioactivity related to nuclear physics, which studies atomic nuclei, which contain protons.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_010",
+    "question": "What is the connection between Nikola Tesla and electric fields?",
+    "expected_entities": [
+      "Nikola Tesla",
+      "electric fields"
+    ],
+    "expected_relationships": [
+      "WORKED_ON",
+      "USES",
+      "DESCRIBES"
+    ],
+    "expected_answer": "Nikola Tesla worked on electrical engineering, which uses electromagnetism, which describes electric fields.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_011",
+    "question": "What is the connection between electrical engineering and charged particles?",
+    "expected_entities": [
+      "electrical engineering",
+      "charged particles"
+    ],
+    "expected_relationships": [
+      "USES",
+      "DESCRIBES",
+      "AFFECT"
+    ],
+    "expected_answer": "electrical engineering uses electromagnetism, which describes electric fields, which affect charged particles.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_012",
+    "question": "What is the connection between James Clerk Maxwell and charged particles?",
+    "expected_entities": [
+      "James Clerk Maxwell",
+      "charged particles"
+    ],
+    "expected_relationships": [
+      "DEVELOPED",
+      "DESCRIBES",
+      "AFFECT"
+    ],
+    "expected_answer": "James Clerk Maxwell developed electromagnetism, which describes electric fields, which affect charged particles.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_013",
+    "question": "What is the connection between Ada Lovelace and artificial intelligence?",
+    "expected_entities": [
+      "Ada Lovelace",
+      "artificial intelligence"
+    ],
+    "expected_relationships": [
+      "WORKED_ON",
+      "INFLUENCED",
+      "INFLUENCED"
+    ],
+    "expected_answer": "Ada Lovelace worked on mathematical computing, which influenced computing, which influenced artificial intelligence.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_014",
+    "question": "What is the connection between Ada Lovelace and software?",
+    "expected_entities": [
+      "Ada Lovelace",
+      "software"
+    ],
+    "expected_relationships": [
+      "WORKED_ON",
+      "INFLUENCED",
+      "ENABLES"
+    ],
+    "expected_answer": "Ada Lovelace worked on mathematical computing, which influenced computing, which enables software.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_015",
+    "question": "What is the connection between mathematical computing and machine learning?",
+    "expected_entities": [
+      "mathematical computing",
+      "machine learning"
+    ],
+    "expected_relationships": [
+      "INFLUENCED",
+      "INFLUENCED",
+      "USES"
+    ],
+    "expected_answer": "mathematical computing influenced computing, which influenced artificial intelligence, which uses machine learning.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_016",
+    "question": "What is the connection between mathematical computing and computers?",
+    "expected_entities": [
+      "mathematical computing",
+      "computers"
+    ],
+    "expected_relationships": [
+      "INFLUENCED",
+      "ENABLES",
+      "RUNS_ON"
+    ],
+    "expected_answer": "mathematical computing influenced computing, which enables software, which runs on computers.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_017",
+    "question": "What is the connection between Alan Turing and machine learning?",
+    "expected_entities": [
+      "Alan Turing",
+      "machine learning"
+    ],
+    "expected_relationships": [
+      "WORKED_ON",
+      "INFLUENCED",
+      "USES"
+    ],
+    "expected_answer": "Alan Turing worked on computing, which influenced artificial intelligence, which uses machine learning.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_018",
+    "question": "What is the connection between Alan Turing and computers?",
+    "expected_entities": [
+      "Alan Turing",
+      "computers"
+    ],
+    "expected_relationships": [
+      "WORKED_ON",
+      "ENABLES",
+      "RUNS_ON"
+    ],
+    "expected_answer": "Alan Turing worked on computing, which enables software, which runs on computers.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_019",
+    "question": "What is the connection between computing and neural networks?",
+    "expected_entities": [
+      "computing",
+      "neural networks"
+    ],
+    "expected_relationships": [
+      "INFLUENCED",
+      "USES",
+      "USES"
+    ],
+    "expected_answer": "computing influenced artificial intelligence, which uses machine learning, which uses neural networks.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_020",
+    "question": "What is the connection between Charles Darwin and populations?",
+    "expected_entities": [
+      "Charles Darwin",
+      "populations"
+    ],
+    "expected_relationships": [
+      "DEVELOPED",
+      "EXPLAINS",
+      "AFFECTS"
+    ],
+    "expected_answer": "Charles Darwin developed evolution, which explains natural selection, which affects populations.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_021",
+    "question": "What is the connection between evolution and species?",
+    "expected_entities": [
+      "evolution",
+      "species"
+    ],
+    "expected_relationships": [
+      "EXPLAINS",
+      "AFFECTS",
+      "CHANGE_OVER_TIME"
+    ],
+    "expected_answer": "evolution explains natural selection, which affects populations, which change over time species.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_022",
+    "question": "What is the connection between Katherine Johnson and scientific modeling?",
+    "expected_entities": [
+      "Katherine Johnson",
+      "scientific modeling"
+    ],
+    "expected_relationships": [
+      "WORKED_ON",
+      "USES",
+      "SUPPORTS"
+    ],
+    "expected_answer": "Katherine Johnson worked on space science, which uses mathematics, which supports scientific modeling.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_023",
+    "question": "What is the connection between Katherine Johnson and machine learning?",
+    "expected_entities": [
+      "Katherine Johnson",
+      "machine learning"
+    ],
+    "expected_relationships": [
+      "WORKED_ON",
+      "USES",
+      "SUPPORTS"
+    ],
+    "expected_answer": "Katherine Johnson worked on space science, which uses mathematics, which supports machine learning.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_024",
+    "question": "What is the connection between space science and computing?",
+    "expected_entities": [
+      "space science",
+      "computing"
+    ],
+    "expected_relationships": [
+      "USES",
+      "SUPPORTS",
+      "USES"
+    ],
+    "expected_answer": "space science uses mathematics, which supports scientific modeling, which uses computing.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_025",
+    "question": "What is the connection between space science and neural networks?",
+    "expected_entities": [
+      "space science",
+      "neural networks"
+    ],
+    "expected_relationships": [
+      "USES",
+      "SUPPORTS",
+      "USES"
+    ],
+    "expected_answer": "space science uses mathematics, which supports machine learning, which uses neural networks.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_026",
+    "question": "What is the connection between mathematics and artificial intelligence?",
+    "expected_entities": [
+      "mathematics",
+      "artificial intelligence"
+    ],
+    "expected_relationships": [
+      "SUPPORTS",
+      "USES",
+      "INFLUENCED"
+    ],
+    "expected_answer": "mathematics supports scientific modeling, which uses computing, which influenced artificial intelligence.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_027",
+    "question": "What is the connection between mathematics and software?",
+    "expected_entities": [
+      "mathematics",
+      "software"
+    ],
+    "expected_relationships": [
+      "SUPPORTS",
+      "USES",
+      "ENABLES"
+    ],
+    "expected_answer": "mathematics supports scientific modeling, which uses computing, which enables software.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_028",
+    "question": "What is the connection between scientific modeling and machine learning?",
+    "expected_entities": [
+      "scientific modeling",
+      "machine learning"
+    ],
+    "expected_relationships": [
+      "USES",
+      "INFLUENCED",
+      "USES"
+    ],
+    "expected_answer": "scientific modeling uses computing, which influenced artificial intelligence, which uses machine learning.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_029",
+    "question": "What is the connection between scientific modeling and computers?",
+    "expected_entities": [
+      "scientific modeling",
+      "computers"
+    ],
+    "expected_relationships": [
+      "USES",
+      "ENABLES",
+      "RUNS_ON"
+    ],
+    "expected_answer": "scientific modeling uses computing, which enables software, which runs on computers.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_030",
+    "question": "What is the connection between Grace Hopper and machine learning?",
+    "expected_entities": [
+      "Grace Hopper",
+      "machine learning"
+    ],
+    "expected_relationships": [
+      "WORKED_ON",
+      "INFLUENCED",
+      "USES"
+    ],
+    "expected_answer": "Grace Hopper worked on computing, which influenced artificial intelligence, which uses machine learning.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_031",
+    "question": "What is the connection between Grace Hopper and computers?",
+    "expected_entities": [
+      "Grace Hopper",
+      "computers"
+    ],
+    "expected_relationships": [
+      "WORKED_ON",
+      "ENABLES",
+      "RUNS_ON"
+    ],
+    "expected_answer": "Grace Hopper worked on computing, which enables software, which runs on computers.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_032",
+    "question": "What is the connection between theory of relativity and scientific modeling?",
+    "expected_entities": [
+      "theory of relativity",
+      "scientific modeling"
+    ],
+    "expected_relationships": [
+      "INFLUENCED",
+      "USES",
+      "SUPPORTS"
+    ],
+    "expected_answer": "theory of relativity influenced modern physics, which uses mathematics, which supports scientific modeling.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_033",
+    "question": "What is the connection between theory of relativity and machine learning?",
+    "expected_entities": [
+      "theory of relativity",
+      "machine learning"
+    ],
+    "expected_relationships": [
+      "INFLUENCED",
+      "USES",
+      "SUPPORTS"
+    ],
+    "expected_answer": "theory of relativity influenced modern physics, which uses mathematics, which supports machine learning.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_034",
+    "question": "What is the connection between modern physics and computing?",
+    "expected_entities": [
+      "modern physics",
+      "computing"
+    ],
+    "expected_relationships": [
+      "USES",
+      "SUPPORTS",
+      "USES"
+    ],
+    "expected_answer": "modern physics uses mathematics, which supports scientific modeling, which uses computing.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "three_hop_035",
+    "question": "What is the connection between modern physics and neural networks?",
+    "expected_entities": [
+      "modern physics",
+      "neural networks"
+    ],
+    "expected_relationships": [
+      "USES",
+      "SUPPORTS",
+      "USES"
+    ],
+    "expected_answer": "modern physics uses mathematics, which supports machine learning, which uses neural networks.",
+    "required_hops": 3,
+    "expected_citation_type": "chain"
+  },
+  {
+    "id": "negative_001",
+    "question": "Who discovered quantum mechanics?",
+    "expected_entities": [],
+    "expected_relationships": [],
+    "expected_answer": null,
+    "required_hops": 0,
+    "expected_citation_type": "none"
+  },
+  {
+    "id": "negative_002",
+    "question": "What did Leonardo da Vinci develop?",
+    "expected_entities": [],
+    "expected_relationships": [],
+    "expected_answer": null,
+    "required_hops": 0,
+    "expected_citation_type": "none"
+  },
+  {
+    "id": "negative_003",
+    "question": "Who invented the telephone?",
+    "expected_entities": [],
+    "expected_relationships": [],
+    "expected_answer": null,
+    "required_hops": 0,
+    "expected_citation_type": "none"
+  },
+  {
+    "id": "negative_004",
+    "question": "What is the relationship between quantum mechanics and Tesla?",
+    "expected_entities": [],
+    "expected_relationships": [],
+    "expected_answer": null,
+    "required_hops": 0,
+    "expected_citation_type": "none"
+  },
+  {
+    "id": "negative_005",
+    "question": "What did Galileo discover?",
+    "expected_entities": [],
+    "expected_relationships": [],
+    "expected_answer": null,
+    "required_hops": 0,
+    "expected_citation_type": "none"
+  },
+  {
+    "id": "negative_006",
+    "question": "How is Shakespeare connected to artificial intelligence?",
+    "expected_entities": [],
+    "expected_relationships": [],
+    "expected_answer": null,
+    "required_hops": 0,
+    "expected_citation_type": "none"
+  },
+  {
+    "id": "negative_007",
+    "question": "Who developed quantum computing?",
+    "expected_entities": [],
+    "expected_relationships": [],
+    "expected_answer": null,
+    "required_hops": 0,
+    "expected_citation_type": "none"
+  },
+  {
+    "id": "negative_008",
+    "question": "What did Steve Jobs discover?",
+    "expected_entities": [],
+    "expected_relationships": [],
+    "expected_answer": null,
+    "required_hops": 0,
+    "expected_citation_type": "none"
+  },
+  {
+    "id": "negative_009",
+    "question": "How is Mars related to Einstein?",
+    "expected_entities": [],
+    "expected_relationships": [],
+    "expected_answer": null,
+    "required_hops": 0,
+    "expected_citation_type": "none"
+  },
+  {
+    "id": "negative_010",
+    "question": "Who discovered DNA?",
+    "expected_entities": [],
+    "expected_relationships": [],
+    "expected_answer": null,
+    "required_hops": 0,
+    "expected_citation_type": "none"
+  }
+]

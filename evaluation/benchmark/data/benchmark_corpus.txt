@@ -1,0 +1,24 @@
+Albert Einstein developed theory of relativity.
+theory of relativity describes spacetime.
+Isaac Newton developed laws of motion.
+laws of motion describes forces.
+Marie Curie discovered radioactivity.
+radioactivity related to nuclear physics.
+Nikola Tesla worked on electrical engineering.
+electrical engineering uses electromagnetism.
+James Clerk Maxwell developed electromagnetism.
+electromagnetism describes electric fields.
+Ada Lovelace worked on mathematical computing.
+mathematical computing influenced computing.
+Alan Turing worked on computing.
+computing influenced artificial intelligence.
+Charles Darwin developed evolution.
+evolution explains natural selection.
+Katherine Johnson worked on space science.
+space science uses mathematics.
+Grace Hopper worked on computing.
+Germany is a country in Europe.
+France is a country in Europe.
+Canada is a country in North America.
+Mathematics is used across many scientific disciplines.
+Scientific research often builds upon earlier discoveries.

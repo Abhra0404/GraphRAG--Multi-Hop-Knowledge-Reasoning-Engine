@@ -26,10 +26,6 @@ htmlcov/
 # Logs
 *.log
 
-# Data
-data/
-storage/
-
 # Qdrant
 .qdrant/
 
